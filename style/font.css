@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'El Messiri';
+    src: url('/fonts/ElMessiri-Bold.eot');
+    src: url('/fonts/ElMessiri-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/ElMessiri-Bold.woff2') format('woff2'),
+    url('/fonts/ElMessiri-Bold.woff') format('woff'),
+    url('/fonts/ElMessiri-Bold.ttf') format('truetype'),
+    url('/fonts/ElMessiri-Bold.svg#ElMessiri-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
