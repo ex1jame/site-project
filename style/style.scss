@@ -3,14 +3,14 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "El Messiri", Serif;
-  background: #162831;
+  font-family: "Open Sans", sans-serif;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 button {
@@ -46,26 +46,72 @@ a {
   justify-content: center;
 }
 
-.blue_btn {
+.gray_btn {
   padding: 9px 15px;
   width: 165px;
   height: 36px;
-  background: #018ABE;
-  border-radius: 3px;
+  background: rgb(29, 29, 29);
+  border-radius: 10px;
   font-weight: 600;
   font-size: 13px;
   line-height: 140%;
   color: #FFFFFF;
 }
 
+.dark-mode {
+  position: fixed;
+  right: 25px;
+  bottom: 10%;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  margin-top: 1%;
+  outline: none;
+}
+
+button:hover {
+  background: rgb(45, 59, 102);
+}
+
+.section_title {
+
+  position: relative;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 140%;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.section_leaf-first {
+  position: absolute;
+  left: 440px;
+  top: 20px;
+
+}
+
+.section_leaf-second {
+  position: absolute;
+  right: 440px;
+  top: 20px;
+}
+
+
 //Header
 .header {
+  position: absolute;
   height: 60px;
-  padding: 30px 0;
+  width: 100%;
 
   &__title {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 135%;
     color: #FFFFFF;
     margin-right: 50px;
@@ -74,24 +120,29 @@ a {
 
 //Hero section
 .hero {
-  height: 65vh;
-  margin-top: 50px;
-  background: linear-gradient(0deg, rgba(152, 201, 220, 0.29), rgba(152, 201, 220, 0.3)), url("../images/bg_hero.png") no-repeat center/cover;
-  border-radius: 10px;
-
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(66, 63, 63, 0.45), rgba(169, 168, 168, 0.37)), url("../images/white_zal.png") no-repeat center/cover;
+& .container{
+  position: relative;
+  height: 100vh;
+}
   &__info {
+
     text-align: center;
   }
 
   &__subtitle {
+    text-transform: uppercase;
     position: relative;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 140%;
     color: #FFFFFF;
   }
 
   &__leaf {
+    text-transform: uppercase;
     position: absolute;
     left: 118px;
     top: 8px;
@@ -104,12 +155,31 @@ a {
   }
 
   &__title {
-    margin-top: 20px;
     width: 99%;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 70px;
     line-height: 140%;
     color: #FFFFFF;
   }
 }
 
+//Halls section
+.halls {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  &__block {
+    border-radius: 10px;
+    box-shadow: -15px -7px 24px 3px rgba(34, 60, 80, 0.2);
+  }
+
+  &__block img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+}
