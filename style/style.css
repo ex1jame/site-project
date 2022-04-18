@@ -14,7 +14,7 @@ body {
 
 button {
   background: none;
-  border: none;
+  border: inherit;
 }
 
 a {
@@ -58,19 +58,17 @@ a {
 
 .dark-mode {
   position: fixed;
+  width: 60px;
+  height: 60px;
   right: 25px;
   bottom: 10%;
-  padding: 8px;
-  background-color: #000;
-  color: #fff;
+  background: rgba(7, 7, 7, 0.28);
+  border-radius: 50px;
+  padding: 5px;
   border: none;
-  border-radius: 3px;
-  font-size: 1em;
-  margin-top: 1%;
-  outline: none;
 }
 
-button:hover {
+.dark-mode:hover {
   background: rgb(45, 59, 102);
 }
 
@@ -100,7 +98,8 @@ button:hover {
 
 .header {
   position: absolute;
-  height: 60px;
+  border-radius: 100px;
+  height: 80px;
   width: 100%;
 }
 .header__title {
@@ -157,13 +156,81 @@ button:hover {
   grid-row-gap: 20px;
 }
 .halls__block {
+  position: relative;
+  display: flex;
   border-radius: 10px;
-  box-shadow: -15px -7px 24px 3px rgba(34, 60, 80, 0.2);
+  box-shadow: -42px -17px 100px -29px rgba(34, 60, 80, 0.28);
+  cursor: pointer;
+}
+.halls__block:before {
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 0.4s ease;
+  content: "";
+}
+.halls__block:hover:before {
+  opacity: 1;
 }
 .halls__block img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  object-fit: cover;
+}
+.halls__title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 150px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 140%;
+  color: #FFFFFF;
+  transition: 0.4s;
+  opacity: 0;
+}
+.halls__title:hover {
+  opacity: 1;
+}
+
+.carousel {
+  background: #FAFAFA;
+}
+
+.carousel-cell {
+  width: 28%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+.button {
+  font-size: 22px;
+}
+
+.button-group {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
