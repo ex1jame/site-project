@@ -58,9 +58,7 @@ a {
     line-height: 140%;
     color: #FFFFFF;
 }
-.dark-mode{
-    border: 1px solid black;
-}
+
 .section_title {
     position: relative;
     font-weight: 700;
@@ -83,9 +81,7 @@ a {
     right: 440px;
     top: 20px;
 }
-
-
-/*Header*/
-
-
-/*Hero section*/
+/*Review section*/
+.review__card{
+    background: rgb(29, 29, 29);
+}

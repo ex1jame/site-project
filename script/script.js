@@ -13,15 +13,3 @@ var flkty = new Flickity( '.carousel', {
     groupCells: true
 });
 
-var buttonGroup = document.querySelector('.button-group');
-var buttons = buttonGroup.querySelectorAll('.button');
-buttons = fizzyUIUtils.makeArray( buttons );
-
-buttonGroup.addEventListener( 'click', function( event ) {
-
-    if ( !matchesSelector( event.target, '.button' ) ) {
-        return;
-    }
-    var index = buttons.indexOf( event.target );
-    flkty.selectCell( index );
-});
