@@ -82,5 +82,15 @@ a {
   top: 20px;
 }
 
+.review__card{
+  background: rgb(255, 255, 255);
+  filter: brightness(60%);
+}
+.review__title{
+   color: rgb(29, 29, 29);
 
-/*//Header*/
+ }
+.review__desc{
+
+   color: rgb(29, 29, 29);
+ }
