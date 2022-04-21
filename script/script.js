@@ -9,7 +9,13 @@ switchMode.onclick = function () {
         theme.href = "style/light-mode.css"
     }
 }
-var flkty = new Flickity( '.carousel', {
-    groupCells: true
-});
-
+var prevScrollpos = window.pageXOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.left = "0";
+    } else {
+        document.getElementById("navbar").style.left = "-200px";
+    }
+    prevScrollpos = currentScrollPos;
+}

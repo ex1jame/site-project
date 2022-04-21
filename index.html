@@ -10,7 +10,7 @@
     <title>Azvanteam</title>
 </head>
 <body>
-<header class="header ">
+<header class="header">
     <div class="container d-flex justify-between align-center">
         <div class="header__logo">
             <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="80px" height="80px">
@@ -30,12 +30,10 @@
             <a class="header__title">Залы</a>
             <a class="header__title">Отзывы</a>
             <a class="header__title">Контакты</a>
-            <a class="header__title">Новости</a>
-            <a class="header__title">Обо мне</a>
-            <a class="header__title">Блог</a>
+            <a class="header__title">О Нас</a>
         </div>
         <div class="header__btn">
-            <button class="gray_btn">Записаться на сеанс</button>
+            <button class="gray_btn">Регистрация</button>
             <button class="dark-mode" id="switchMode">
                 <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
                     <path d="M 24.90625 3.96875 C 24.863281 3.976563
@@ -49,7 +47,14 @@
         </div>
     </div>
 </header>
-<section class="hero ">
+<nav class="header__nav" id="navbar">
+    <a href="#home" class="header__nav-title">Главная</a>
+    <a href="#halls" class="header__nav-title">Залы</a>
+    <a href="#review" class="header__nav-title">Отзывы</a>
+    <a href="#contact" class="header__nav-title">Контакты</a>
+    <a href="#about" class="header__nav-title">О Нас</a>
+</nav>
+<section class="hero " id="home">
     <div class="container d-flex align-center justify-center">
         <div class="hero__info ">
             <p class="hero__subtitle">Фотостудия</p>
@@ -57,7 +62,7 @@
         </div>
     </div>
 </section>
-<section class="halls">
+<section class="halls" id="halls">
     <div class="container">
         <p class="section_title">Выбор Зала
             <svg class="section_leaf-first" width="28" height="14" viewBox="0 0 28 14" fill="none"
@@ -87,9 +92,12 @@
                 <h3 class="halls__title">86 St.</h3>
             </div>
         </div>
+        <form action="./halls.html" class="halls__form">
+            <button class="halls__btn">Подробнее</button>
+        </form>
     </div>
 </section>
-<section class="review">
+<section class="review" id="review">
     <div class="container">
         <p class="section_title">Отзывы
             <svg class="section_leaf-first" width="28" height="14" viewBox="0 0 28 14" fill="none"
@@ -129,24 +137,24 @@
                     Porta enim, donec odio sagittis, eget velit at. </p>
             </div>
             <div class="review__card ">
-                <div class="card-black">
-                    <h5 class="review__title">Яна Жернова</h5>
-                    <p class="review__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia eget mattis
-                        orci aliquam enim tincidunt gravida aliquet ut. Ipsum vulputate morbi felis, lobortis tincidunt.
-                        Pretium dictum odio feugiat auctor diam sit viverra gravida.
-                        Lobortis arcu rhoncus, mi mi vitae feugiat amet, vitae ac. Cursus diam turpis iaculis nisi
-                        sit.</p>
-                    <p class="review__desc">Vel blandit et sit elit vestibulum feugiat proin tempor, justo. Diam
-                        commodo, pellentesque at porttitor tristique faucibus faucibus morbi. Bibendum pretium lacus,
-                        tempus viverra vitae odio nunc eget.
-                        Tortor fermentum orci neque sed. Mauris faucibus diam lorem erat ullamcorper donec egestas
-                        neque. Maecenas malesuada mauris magnis sed id. Luctus vitae justo, in consectetur arcu. Nulla
-                        feugiat at eu in aliquet. Diam nunc, libero mauris tellus suspendisse morbi sagittis
-                        semper. </p>
-                </div>
+
+                <h5 class="review__title">Яна Жернова</h5>
+                <p class="review__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia eget mattis
+                    orci aliquam enim tincidunt gravida aliquet ut. Ipsum vulputate morbi felis, lobortis tincidunt.
+                    Pretium dictum odio feugiat auctor diam sit viverra gravida.
+                    Lobortis arcu rhoncus, mi mi vitae feugiat amet, vitae ac. Cursus diam turpis iaculis nisi
+                    sit.</p>
+                <p class="review__desc">Vel blandit et sit elit vestibulum feugiat proin tempor, justo. Diam
+                    commodo, pellentesque at porttitor tristique faucibus faucibus morbi. Bibendum pretium lacus,
+                    tempus viverra vitae odio nunc eget.
+                    Tortor fermentum orci neque sed. Mauris faucibus diam lorem erat ullamcorper donec egestas
+                    neque. Maecenas malesuada mauris magnis sed id. Luctus vitae justo, in consectetur arcu. Nulla
+                    feugiat at eu in aliquet. Diam nunc, libero mauris tellus suspendisse morbi sagittis
+                    semper. </p>
+
             </div>
             <div class="review__card">
-                <h5 class="review__title">Яна Жернова</h5>
+                <h5 class="review__title">Антон Шастун</h5>
                 <p class="review__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia eget mattis
                     orci aliquam enim tincidunt gravida aliquet ut. Ipsum vulputate morbi felis, lobortis tincidunt.
                     Pretium dictum odio feugiat auctor diam sit viverra gravida.
@@ -157,6 +165,133 @@
                     Tortor fermentum orci neque sed. Mauris faucibus diam lorem erat ullamcorper donec egestas neque.
                     Maecenas malesuada mauris magnis sed id. Luctus vitae justo, in consectetur arcu. Nulla feugiat at
                     eu in aliquet. Diam nunc, libero mauris tellus suspendisse morbi sagittis semper. </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about" id="about">
+    <div class="container">
+        <p class="section_title">ОБ Azvanteam
+            <svg class="section_leaf-first" width="28" height="14" viewBox="0 0 28 14" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0H14C21.732 0 28 6.26801 28 14H14C6.26801 14 0 7.73199 0 0Z" fill="#018ABE"/>
+            </svg>
+            <svg class="section_leaf-second" width="28" height="14" viewBox="0 0 28 14" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M28 0H14C6.26801 0 0 6.26801 0 14H14C21.732 14 28 7.73199 28 0Z" fill="#018ABE"/>
+            </svg>
+        </p>
+        <div class="about__grid">
+
+            <div class="about__info">
+                <h5 class="about__title">Azvanteam</h5>
+                <p class="about__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in purus, sed
+                    tellus eget mattis nibh quam. Eu ornare nunc, id est. Erat consectetur etiam a sit diam in imperdiet
+                    amet. Diam nisl, ipsum suscipit amet. Eleifend amet habitasse proin quis adipiscing.
+                </p>
+                <p class="about__desc">Nisl convallis mauris in consequat. Sit ac vitae posuere maecenas dictumst quam.
+                    Felis amet diam, non augue massa. Egestas molestie lobortis rhoncus, elit nulla nisl. Habitant
+                    tortor at tempor.</p>
+            </div>
+            <div class="about__img">
+                <img src="images/about_1.jpg" alt="" class="">
+            </div>
+            <div class="about__img">
+                <img src="images/about_2.png" alt="" class="">
+            </div>
+            <div class="about__info">
+                <h5 class="about__title">Azvanteam</h5>
+                <p class="about__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu cras quis ac a non
+                    ut viverra turpis eget. Hendrerit quis pulvinar massa ipsum sem. Donec posuere nulla enim non neque
+                    etiam. Eros arcu, pulvinar penatibus luctus ridiculus sagittis vel nunc hac. Nisi, diam tincidunt
+                    dui viverra. Eget quis ultricies sem nunc risus senectus luctus ultricies. Enim feugiat pharetra
+                    pharetra et.
+                </p>
+                <p class="about__desc">
+                    Pulvinar arcu at morbi posuere cursus. Fermentum est sit enim velit ornare molestie. Ipsum nisi id
+                    sed tempor elementum. Mi nunc eget pellentesque ipsum. Suspendisse risus a id vel massa tincidunt.
+                    Hendrerit blandit in augue vel mi quam magna egestas. Fringilla ac lacus viverra ullamcorper leo,
+                    enim vitae id aliquam. Magna sed tristique tellus enim, netus tempor at elit dui. Ullamcorper
+                    hendrerit feugiat libero tellus diam egestas dui tellus odio.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <p class="section_title">Контакты
+            <svg class="section_leaf-first" width="28" height="14" viewBox="0 0 28 14" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0H14C21.732 0 28 6.26801 28 14H14C6.26801 14 0 7.73199 0 0Z" fill="#018ABE"/>
+            </svg>
+            <svg class="section_leaf-second" width="28" height="14" viewBox="0 0 28 14" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M28 0H14C6.26801 0 0 6.26801 0 14H14C21.732 14 28 7.73199 28 0Z" fill="#018ABE"/>
+            </svg>
+        </p>
+        <div class="contact__grid">
+            <div class="contact__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1738.5507484783227!2d74.61409803858086!3d42.87533080006017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skg!4v1650547956570!5m2!1sru!2skg"
+                        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact__info">
+                <div class="contact__card">
+                    <p class="contact__title">Фотостудия Azvanteam #1</p>
+                    <p class="contact__subtitle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1.25C8.1773 1.25215 6.42987 1.97717 5.14102 3.26602C3.85218 4.55486 3.12716 6.3023 3.12501 8.125C3.12282 9.61452 3.60937 11.0636 4.51001 12.25C4.51001 12.25 4.69751 12.4969 4.72813 12.5325L10 18.75L15.2744 12.5294C15.3019 12.4963 15.49 12.25 15.49 12.25L15.4906 12.2481C16.3908 11.0623 16.8771 9.61383 16.875 8.125C16.8729 6.3023 16.1478 4.55486 14.859 3.26602C13.5701 1.97717 11.8227 1.25215 10 1.25ZM10 10.625C9.50555 10.625 9.02221 10.4784 8.61108 10.2037C8.19996 9.92897 7.87953 9.53852 7.69031 9.08171C7.50109 8.62489 7.45158 8.12223 7.54804 7.63727C7.64451 7.15232 7.88261 6.70686 8.23224 6.35723C8.58187 6.0076 9.02733 5.7695 9.51228 5.67304C9.99723 5.57657 10.4999 5.62608 10.9567 5.8153C11.4135 6.00452 11.804 6.32495 12.0787 6.73607C12.3534 7.1472 12.5 7.63055 12.5 8.125C12.4992 8.78779 12.2355 9.42319 11.7669 9.89185C11.2982 10.3605 10.6628 10.6242 10 10.625Z"
+                                  fill="white"/>
+                        </svg>
+                        ТРЦ Гум, 92 просп.
+                    </p>
+                    <p class="contact__subtitle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0.625C5 0.45924 4.93415 0.300269 4.81694 0.183058C4.69973 0.065848 4.54076 0 4.375 0C4.20924 0 4.05027 0.065848 3.93306 0.183058C3.81585 0.300269 3.75 0.45924 3.75 0.625V1.25H2.5C1.83696 1.25 1.20107 1.51339 0.732233 1.98223C0.263392 2.45107 0 3.08696 0 3.75L0 5H20V3.75C20 3.08696 19.7366 2.45107 19.2678 1.98223C18.7989 1.51339 18.163 1.25 17.5 1.25H16.25V0.625C16.25 0.45924 16.1842 0.300269 16.0669 0.183058C15.9497 0.065848 15.7908 0 15.625 0C15.4592 0 15.3003 0.065848 15.1831 0.183058C15.0658 0.300269 15 0.45924 15 0.625V1.25H5V0.625ZM20 17.5V6.25H0V17.5C0 18.163 0.263392 18.7989 0.732233 19.2678C1.20107 19.7366 1.83696 20 2.5 20H17.5C18.163 20 18.7989 19.7366 19.2678 19.2678C19.7366 18.7989 20 18.163 20 17.5ZM11.875 8.75H13.125C13.2908 8.75 13.4497 8.81585 13.5669 8.93306C13.6842 9.05027 13.75 9.20924 13.75 9.375V10.625C13.75 10.7908 13.6842 10.9497 13.5669 11.0669C13.4497 11.1842 13.2908 11.25 13.125 11.25H11.875C11.7092 11.25 11.5503 11.1842 11.4331 11.0669C11.3158 10.9497 11.25 10.7908 11.25 10.625V9.375C11.25 9.20924 11.3158 9.05027 11.4331 8.93306C11.5503 8.81585 11.7092 8.75 11.875 8.75ZM15.625 8.75H16.875C17.0408 8.75 17.1997 8.81585 17.3169 8.93306C17.4342 9.05027 17.5 9.20924 17.5 9.375V10.625C17.5 10.7908 17.4342 10.9497 17.3169 11.0669C17.1997 11.1842 17.0408 11.25 16.875 11.25H15.625C15.4592 11.25 15.3003 11.1842 15.1831 11.0669C15.0658 10.9497 15 10.7908 15 10.625V9.375C15 9.20924 15.0658 9.05027 15.1831 8.93306C15.3003 8.81585 15.4592 8.75 15.625 8.75ZM2.5 13.125C2.5 12.9592 2.56585 12.8003 2.68306 12.6831C2.80027 12.5658 2.95924 12.5 3.125 12.5H4.375C4.54076 12.5 4.69973 12.5658 4.81694 12.6831C4.93415 12.8003 5 12.9592 5 13.125V14.375C5 14.5408 4.93415 14.6997 4.81694 14.8169C4.69973 14.9342 4.54076 15 4.375 15H3.125C2.95924 15 2.80027 14.9342 2.68306 14.8169C2.56585 14.6997 2.5 14.5408 2.5 14.375V13.125ZM6.875 12.5H8.125C8.29076 12.5 8.44973 12.5658 8.56694 12.6831C8.68415 12.8003 8.75 12.9592 8.75 13.125V14.375C8.75 14.5408 8.68415 14.6997 8.56694 14.8169C8.44973 14.9342 8.29076 15 8.125 15H6.875C6.70924 15 6.55027 14.9342 6.43306 14.8169C6.31585 14.6997 6.25 14.5408 6.25 14.375V13.125C6.25 12.9592 6.31585 12.8003 6.43306 12.6831C6.55027 12.5658 6.70924 12.5 6.875 12.5Z"
+                                  fill="white"/>
+                        </svg>
+                        +996 323 125 412
+                    </p>
+                    <p class="contact__subtitle">
+                        <svg width="20" height="20" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.379 10.544c.73-.733 1.432-1.435 2.165-2.165.932-.992 1.105-1.912.671-2.234l-.889-.513a1.163 1.163 0 01-.425-1.588l1.334-2.312a1.163 1.163 0 011.589-.425l.889.513c2.884 1.665-.464 7.013-1.864 8.413l-1.616 1.616c-1.4 1.4-6.748 4.748-8.413 1.864l-.513-.89a1.163 1.163 0 01.425-1.588L4.044 9.9a1.163 1.163 0 011.588.425l.514.89c.321.433 1.24.26 2.233-.672z"
+                                  fill="#fff"></path>
+                        </svg>
+                        Запись по договоренности
+                    </p>
+                    <button class="contact__btn">
+                        Записаться на сеанс
+                    </button>
+                </div>
+                <div class="contact__card">
+                    <p class="contact__title">Фотостудия Azvanteam #2</p>
+                    <p class="contact__subtitle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1.25C8.1773 1.25215 6.42987 1.97717 5.14102 3.26602C3.85218 4.55486 3.12716 6.3023 3.12501 8.125C3.12282 9.61452 3.60937 11.0636 4.51001 12.25C4.51001 12.25 4.69751 12.4969 4.72813 12.5325L10 18.75L15.2744 12.5294C15.3019 12.4963 15.49 12.25 15.49 12.25L15.4906 12.2481C16.3908 11.0623 16.8771 9.61383 16.875 8.125C16.8729 6.3023 16.1478 4.55486 14.859 3.26602C13.5701 1.97717 11.8227 1.25215 10 1.25ZM10 10.625C9.50555 10.625 9.02221 10.4784 8.61108 10.2037C8.19996 9.92897 7.87953 9.53852 7.69031 9.08171C7.50109 8.62489 7.45158 8.12223 7.54804 7.63727C7.64451 7.15232 7.88261 6.70686 8.23224 6.35723C8.58187 6.0076 9.02733 5.7695 9.51228 5.67304C9.99723 5.57657 10.4999 5.62608 10.9567 5.8153C11.4135 6.00452 11.804 6.32495 12.0787 6.73607C12.3534 7.1472 12.5 7.63055 12.5 8.125C12.4992 8.78779 12.2355 9.42319 11.7669 9.89185C11.2982 10.3605 10.6628 10.6242 10 10.625Z"
+                                  fill="white"/>
+                        </svg>
+                        ТРЦ Гум, 92 просп.
+                    </p>
+                    <p class="contact__subtitle">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 0.625C5 0.45924 4.93415 0.300269 4.81694 0.183058C4.69973 0.065848 4.54076 0 4.375 0C4.20924 0 4.05027 0.065848 3.93306 0.183058C3.81585 0.300269 3.75 0.45924 3.75 0.625V1.25H2.5C1.83696 1.25 1.20107 1.51339 0.732233 1.98223C0.263392 2.45107 0 3.08696 0 3.75L0 5H20V3.75C20 3.08696 19.7366 2.45107 19.2678 1.98223C18.7989 1.51339 18.163 1.25 17.5 1.25H16.25V0.625C16.25 0.45924 16.1842 0.300269 16.0669 0.183058C15.9497 0.065848 15.7908 0 15.625 0C15.4592 0 15.3003 0.065848 15.1831 0.183058C15.0658 0.300269 15 0.45924 15 0.625V1.25H5V0.625ZM20 17.5V6.25H0V17.5C0 18.163 0.263392 18.7989 0.732233 19.2678C1.20107 19.7366 1.83696 20 2.5 20H17.5C18.163 20 18.7989 19.7366 19.2678 19.2678C19.7366 18.7989 20 18.163 20 17.5ZM11.875 8.75H13.125C13.2908 8.75 13.4497 8.81585 13.5669 8.93306C13.6842 9.05027 13.75 9.20924 13.75 9.375V10.625C13.75 10.7908 13.6842 10.9497 13.5669 11.0669C13.4497 11.1842 13.2908 11.25 13.125 11.25H11.875C11.7092 11.25 11.5503 11.1842 11.4331 11.0669C11.3158 10.9497 11.25 10.7908 11.25 10.625V9.375C11.25 9.20924 11.3158 9.05027 11.4331 8.93306C11.5503 8.81585 11.7092 8.75 11.875 8.75ZM15.625 8.75H16.875C17.0408 8.75 17.1997 8.81585 17.3169 8.93306C17.4342 9.05027 17.5 9.20924 17.5 9.375V10.625C17.5 10.7908 17.4342 10.9497 17.3169 11.0669C17.1997 11.1842 17.0408 11.25 16.875 11.25H15.625C15.4592 11.25 15.3003 11.1842 15.1831 11.0669C15.0658 10.9497 15 10.7908 15 10.625V9.375C15 9.20924 15.0658 9.05027 15.1831 8.93306C15.3003 8.81585 15.4592 8.75 15.625 8.75ZM2.5 13.125C2.5 12.9592 2.56585 12.8003 2.68306 12.6831C2.80027 12.5658 2.95924 12.5 3.125 12.5H4.375C4.54076 12.5 4.69973 12.5658 4.81694 12.6831C4.93415 12.8003 5 12.9592 5 13.125V14.375C5 14.5408 4.93415 14.6997 4.81694 14.8169C4.69973 14.9342 4.54076 15 4.375 15H3.125C2.95924 15 2.80027 14.9342 2.68306 14.8169C2.56585 14.6997 2.5 14.5408 2.5 14.375V13.125ZM6.875 12.5H8.125C8.29076 12.5 8.44973 12.5658 8.56694 12.6831C8.68415 12.8003 8.75 12.9592 8.75 13.125V14.375C8.75 14.5408 8.68415 14.6997 8.56694 14.8169C8.44973 14.9342 8.29076 15 8.125 15H6.875C6.70924 15 6.55027 14.9342 6.43306 14.8169C6.31585 14.6997 6.25 14.5408 6.25 14.375V13.125C6.25 12.9592 6.31585 12.8003 6.43306 12.6831C6.55027 12.5658 6.70924 12.5 6.875 12.5Z"
+                                  fill="white"/>
+                        </svg>
+                        +996 323 125 412
+                    </p>
+                    <p class="contact__subtitle">
+                        <svg width="20" height="20" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M8.379 10.544c.73-.733 1.432-1.435 2.165-2.165.932-.992 1.105-1.912.671-2.234l-.889-.513a1.163 1.163 0 01-.425-1.588l1.334-2.312a1.163 1.163 0 011.589-.425l.889.513c2.884 1.665-.464 7.013-1.864 8.413l-1.616 1.616c-1.4 1.4-6.748 4.748-8.413 1.864l-.513-.89a1.163 1.163 0 01.425-1.588L4.044 9.9a1.163 1.163 0 011.588.425l.514.89c.321.433 1.24.26 2.233-.672z"
+                                  fill="#fff"></path>
+                        </svg>
+                        Запись по договоренности
+                    </p>
+                    <button class="contact__btn">
+                        Записаться на сеанс
+                    </button>
+                </div>
             </div>
         </div>
     </div>

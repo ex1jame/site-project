@@ -94,3 +94,19 @@ a {
 
    color: rgb(29, 29, 29);
  }
+.about__title{
+  color: #FFFFFF;
+}
+.about__desc{
+  color: #FFFFFF;
+}
+.about__img img{
+  border: 1rem solid #018ABE;
+  border-radius: 50px;
+}
+.header__nav{
+  background: #FFFFFF;
+}
+.header__nav-title{
+  color: #2a2a2a;
+}
