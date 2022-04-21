@@ -103,18 +103,42 @@ a {
 //Header
 .header {
   position: absolute;
-  border-radius: 100px;
   height: 80px;
   width: 100%;
-  margin-top: 30px;
-
+  margin-top: 10px;
   &__title {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 16px;
     line-height: 135%;
-    color: #FFFFFF;
+    color: #ffffff;
+
+  }
+
+  &__title:not(:last-child) {
     margin-right: 50px;
   }
+  &__nav {
+    padding: 30px;
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    background: rgb(29, 29, 29);
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+  }
+
+  &__nav-title{
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 135%;
+    color: #ffffff;
+    margin-bottom: 50px;
+  }
+
 }
 
 //Hero section
@@ -166,6 +190,7 @@ a {
 
 //Halls section
 .halls {
+
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -225,10 +250,40 @@ a {
   &__title:hover {
     opacity: 1;
   }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  &__btn {
+    color: #FFFFFF;
+    font-weight: 700;
+    line-height: 100%;
+    font-size: 15px;
+    background: rgb(134, 134, 134);
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    transition: 0.4s;
+  }
+
+  &__btn:hover {
+    background: rgb(29, 29, 29);
+    color: #FFFFFF;
+  }
 }
 
 //Review section
 .review {
+  .section_leaf-first {
+    left: 490px;
+  }
+
+  .section_leaf-second {
+    right: 490px
+  }
 
   &__grid {
     display: grid;
@@ -248,10 +303,10 @@ a {
     transition: 0.6s;
     cursor: pointer;
   }
-  &__card:hover{
+
+  &__card:hover {
     filter: brightness(100%);
   }
-
 
 
   &__title {
@@ -273,5 +328,103 @@ a {
 
   &__desc:not(:last-child) {
     margin-bottom: 20px;
+  }
+}
+
+//ABOUT SECTION
+.about {
+  margin-bottom: 200px;
+  .section_leaf-first {
+    left: 420px;
+  }
+
+  .section_leaf-second {
+    right: 420px
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-row-gap: 50px;
+    grid-column-gap: 84px;
+  }
+
+  &__img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+
+    margin-bottom: 50px;
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;
+
+    margin-bottom: 20px;
+  }
+}
+//Contact section
+.contact{
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+  }
+  &__map{
+    width: 856px;
+    height: 600px;
+  }
+  &__card{
+    padding: 35px 45px;
+    width: 400px;
+    height: 300px;
+    background: #018ABE;
+    border-radius: 20px;
+    margin-bottom: 25px;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+  &__subtitle svg{
+
+    margin-right: 20px;
+  }
+  &__btn{
+    width: 155px;
+    height: 36px;
+    background: #FFFFFF;
+    color: #018ABE;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 140%;
+transition: 0.6s;
+  }
+  &__btn:hover{
+    background: #018ABE;
+    border: #018ABE 1px solid;
+    color: #FFFFFF;
+
   }
 }
