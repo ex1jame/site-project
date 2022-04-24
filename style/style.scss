@@ -46,18 +46,6 @@ a {
   justify-content: center;
 }
 
-.gray_btn {
-  padding: 9px 15px;
-  width: 165px;
-  height: 36px;
-  background: rgb(29, 29, 29);
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 140%;
-  color: #FFFFFF;
-}
-
 .dark-mode {
   position: fixed;
   width: 60px;
@@ -72,6 +60,10 @@ a {
 
 .dark-mode:hover {
   background: rgb(45, 59, 102);
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .section_title {
@@ -102,10 +94,12 @@ a {
 
 //Header
 .header {
+  z-index: 1;
   position: absolute;
   height: 80px;
   width: 100%;
   margin-top: 10px;
+
   &__title {
     font-weight: 600;
     font-size: 16px;
@@ -114,9 +108,14 @@ a {
 
   }
 
+  &__menu {
+    transition: 0.6s;
+  }
+
   &__title:not(:last-child) {
     margin-right: 50px;
   }
+
   &__nav {
     padding: 30px;
     position: fixed;
@@ -130,7 +129,7 @@ a {
     transition: 1s;
   }
 
-  &__nav-title{
+  &__nav-title {
 
     font-weight: 700;
     font-size: 24px;
@@ -143,6 +142,7 @@ a {
 
 //Hero section
 .hero {
+  z-index: 2;
   height: 100vh;
   width: 100%;
   background: linear-gradient(0deg, rgba(66, 63, 63, 0.45), rgba(169, 168, 168, 0.37)), url("../images/white_zal.png") no-repeat center/cover;
@@ -158,6 +158,7 @@ a {
   }
 
   &__subtitle {
+    text-shadow: 11px 7px 8px #333333;
     text-transform: uppercase;
     position: relative;
     font-weight: 700;
@@ -180,9 +181,10 @@ a {
   }
 
   &__title {
+    text-shadow: 11px 7px 8px #333333;
     width: 99%;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 90px;
     line-height: 140%;
     color: #FFFFFF;
   }
@@ -334,6 +336,7 @@ a {
 //ABOUT SECTION
 .about {
   margin-bottom: 200px;
+
   .section_leaf-first {
     left: 420px;
   }
@@ -373,19 +376,22 @@ a {
     margin-bottom: 20px;
   }
 }
+
 //Contact section
-.contact{
-  &__grid{
+.contact {
+  &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
   }
-  &__map{
+
+  &__map {
     width: 856px;
     height: 600px;
   }
-  &__card{
+
+  &__card {
     padding: 35px 45px;
     width: 400px;
     height: 300px;
@@ -393,25 +399,29 @@ a {
     border-radius: 20px;
     margin-bottom: 25px;
   }
-  &__title{
+
+  &__title {
     font-weight: 700;
     font-size: 22px;
     line-height: 140%;
     color: #FFFFFF;
     margin-bottom: 20px;
   }
-  &__subtitle{
+
+  &__subtitle {
     font-weight: 400;
     font-size: 14px;
     line-height: 135%;
     color: #FFFFFF;
     margin-bottom: 20px;
   }
-  &__subtitle svg{
+
+  &__subtitle svg {
 
     margin-right: 20px;
   }
-  &__btn{
+
+  &__btn {
     width: 155px;
     height: 36px;
     background: #FFFFFF;
@@ -419,12 +429,132 @@ a {
     font-weight: 600;
     font-size: 13px;
     line-height: 140%;
-transition: 0.6s;
+    transition: 0.6s;
   }
-  &__btn:hover{
+
+  &__btn:hover {
     background: #018ABE;
     border: #018ABE 1px solid;
     color: #FFFFFF;
 
   }
+}
+
+//Footer
+.footer {
+  background: #111111;
+  height: 100%;
+  padding: 90px;
+
+  &__logo {
+    margin-right: 300px;
+  }
+
+  &__logo &__desc:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__menu {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 110px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav &__desc {
+    margin-bottom: 10px;
+  }
+}
+
+//Halls html
+.header__halls {
+  padding: 20px;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 50px;
+  box-shadow: 0px 21px 45px 2px rgba(34, 60, 80, 0.2);
+  background: #2a2a2a;
+}
+.header__link {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 100%;
+}
+
+//Halls section
+.studios {
+  & .container {
+    width: 98%;
+  }
+
+  &__navbar {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  &__input {
+    margin-bottom: 30px;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    line-height: 1;
+    margin: 0.25em 0;
+    color: rgba(42, 42, 42, 0.76);
+    font-weight: 500;
+  }
+
+  &__halls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  &__studios &__block {
+    box-shadow: none;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px ;
+  }
+&__halls .halls__title{
+  font-size: 50px;
+  padding-top: 120px;
+}
 }

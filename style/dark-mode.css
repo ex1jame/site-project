@@ -101,8 +101,8 @@ a {
   color: #FFFFFF;
 }
 .about__img img{
-  border: 1rem solid #018ABE;
-  border-radius: 50px;
+  border: 10px solid #018ABE;
+  border-radius: 30px;
 }
 .header__nav{
   background: #FFFFFF;
