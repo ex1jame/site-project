@@ -81,16 +81,19 @@ a {
     right: 440px;
     top: 20px;
 }
+
 /*Review section*/
-.review__card{
+.review__card {
     background: rgb(29, 29, 29);
 }
-.about__info{
-    padding: 20px   ;
-     transition: 0.6s;
- }
-.about__info:hover{
-     background: #2a2a2a;
+
+.about__info {
+    padding: 20px;
+    transition: 0.6s;
+}
+
+.about__info:hover {
+    background: #2a2a2a;
     border-radius: 20px;
     color: #FFFFFF;
- }
+}
