@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 //Unique settings
 .container {
   width: 1300px;
@@ -100,6 +104,21 @@ a {
   width: 100%;
   margin-top: 10px;
 
+
+
+  &__menu_list {
+    display: flex;
+
+  }
+
+  &__menu_link:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__logo {
+    z-index: 5;
+  }
+
   &__title {
     font-weight: 600;
     font-size: 16px;
@@ -110,11 +129,9 @@ a {
 
   &__menu {
     transition: 0.6s;
+
   }
 
-  &__title:not(:last-child) {
-    margin-right: 50px;
-  }
 
   &__nav {
     padding: 30px;
@@ -386,6 +403,11 @@ a {
 
   }
 
+  &__map-frame {
+    width: 95%;
+    height: 95%;
+  }
+
   &__map {
     width: 856px;
     height: 600px;
@@ -502,6 +524,7 @@ a {
   box-shadow: 0px 21px 45px 2px rgba(34, 60, 80, 0.2);
   background: #2a2a2a;
 }
+
 .header__link {
   color: #FFFFFF;
   font-weight: 700;
@@ -511,6 +534,8 @@ a {
 
 //Halls section
 .studios {
+  margin-bottom: 19%;
+
   & .container {
     width: 98%;
   }
@@ -551,10 +576,11 @@ a {
     font-weight: 700;
     font-size: 16px;
     color: #333333;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
   }
-&__halls .halls__title{
-  font-size: 50px;
-  padding-top: 120px;
-}
+
+  &__halls .halls__title {
+    font-size: 50px;
+    padding-top: 120px;
+  }
 }
