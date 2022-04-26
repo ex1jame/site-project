@@ -1,4 +1,6 @@
+//Темная и светлая тема
 let switchMode = document.getElementById("switchMode")
+
 
 switchMode.onclick = function () {
     let theme = document.getElementById("theme")
@@ -9,6 +11,7 @@ switchMode.onclick = function () {
         theme.href = "style/light-mode.css"
     }
 }
+//Навигационное меню
 var prevScrollpos = window.pageXOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -18,4 +21,13 @@ window.onscroll = function() {
         document.getElementById("navbar").style.left = "-200px";
     }
     prevScrollpos = currentScrollPos;
+}
+//Бургер меню
+const iconMenu = document.querySelector('.header__menu_icon')
+if (iconMenu){
+     const menuBody = document.querySelector('.header__menu')
+    iconMenu.addEventListener("click", function (e){
+        iconMenu.classList.toggle('_active')
+        menuBody.classList.toggle('_active')
+    })
 }

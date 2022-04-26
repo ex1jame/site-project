@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/light-mode.css" id="theme">
     <title>Azvanteam</title>
+    <link rel="stylesheet" href="style/media.css">
 </head>
 <body>
 <header class="header">
     <div class="container d-flex justify-between align-center">
         <div class="header__logo">
-            <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="80px" height="80px">
+            <svg class="header__logo"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="80px" height="80px">
                 <path d="M 20 2 A 1.0001 1.0001 0 0 0 19.154297 2.4667969 C 9.9452861 17.042872 4.0234375 44.789064 4.0234375 44.789062 A 1.0001 1.0001 0 0 0 4.2929688 45.707031 L 6.2929688 47.707031 A 1.0001 1.0001 0 0 0 6.8046875 47.980469 L 11.804688 48.980469 A 1.0001 1.0001 0 0 0 12.447266 48.894531 L 16.447266
                 46.894531 A 1.0001 1.0001 0 0 0 17 46 C 17
                 46 16.992 45.637709 17.234375 44.304688 C 17.465691 43.032449 17.93718
@@ -25,13 +26,19 @@
             34.835032 42.908494 34.183594 39.705078 z"/>
             </svg>
         </div>
-        <nav class="header__menu" >
-            <a href="#home" class="header__title">Главная</a>
-            <a href="#halls" class="header__title">Залы</a>
-            <a href="#review" class="header__title">Отзывы</a>
-            <a href="#contact" class="header__title">Контакты</a>
-            <a href="#about" class="header__title">О Нас</a>
+        <div class="header__menu_icon ">
+            <span></span>
+        </div>
+        <nav class="header__menu ">
+            <ul class="header__menu_list">
+            <li class="header__menu_link"><a href="#home" class="header__title">Главная</a></li>
+                <li class="header__menu_link"><a href="#halls" class="header__title">Залы</a></li>
+                <li class="header__menu_link"><a href="#review" class="header__title">Отзывы</a></li>
+                <li class="header__menu_link"><a href="#contact" class="header__title">Контакты</a></li>
+                <li class="header__menu_link"><a href="#about" class="header__title">О Нас</a></li>
+            </ul>
         </nav>
+
     </div>
 </header>
 <button class="dark-mode" id="switchMode">
@@ -229,7 +236,7 @@
         <div class="contact__grid">
             <div class="contact__map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1738.5507484783227!2d74.61409803858086!3d42.87533080006017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skg!4v1650547956570!5m2!1sru!2skg"
-                        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        style="border:0;" allowfullscreen="" loading="lazy" class="contact__map-frame"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="contact__info">
@@ -257,9 +264,11 @@
                         </svg>
                         azvanteam@gmail.com
                     </p>
+
                     <button class="contact__btn">
                         Записаться
                     </button>
+
                 </div>
                 <div class="contact__card">
                     <p class="contact__title">Фотостудии Azvanteam #2</p>
@@ -285,6 +294,7 @@
                         </svg>
                         azvanteam@gmail.com
                     </p>
+
                     <button class="contact__btn">
                         Записаться
                     </button>
@@ -294,37 +304,36 @@
     </div>
 </section>
 <footer class="footer d-flex justify-center ">
-        <div class="footer__logo">
-            <p class="footer__title">Azvanteam</p>
-            <div class="d-flex">
-                <p class="footer__desc">+ (0312) 819 79 555</p>
-                <span class="footer__desc">|</span>
-                <p class="footer__desc">info@example.com</p>
-            </div>
+    <div class="footer__logo">
+        <p class="footer__title">Azvanteam</p>
+        <div class="d-flex">
+            <p class="footer__desc">+ (0312) 819 79 555</p>
+            <span class="footer__desc">|</span>
+            <p class="footer__desc">info@example.com</p>
         </div>
-        <div class="footer__menu">
-            <div class="footer__nav">
-                <p class="footer__subtitle">Home</p>
-                <a href="#" class="footer__desc">Home Portfolio</a>
-                <a href="#" class="footer__desc">Home Agency</a>
-                <a href="#" class="footer__desc">Home Architecture</a>
-            </div>
-            <div class="footer__nav">
-                <p class="footer__subtitle">Portfolio</p>
-                <a href="#" class="footer__desc">Masonry Portfolio</a>
-                <a href="#" class="footer__desc">Grid Portfolio</a>
-                <a href="#" class="footer__desc">Metro Portfolio</a>
-                <a href="#" class="footer__desc">Service Details</a>
-            </div>
-            <div class="footer__nav">
-                <p class="footer__subtitle">Blog</p>
-                <a href="#" class="footer__desc">Blog Style 1</a>
-                <a href="#" class="footer__desc">Blog Style 2</a>
-                <a href="#" class="footer__desc">Blog Style 3</a>
-                <a href="#" class="footer__desc">Licensing</a>
-            </div>
+    </div>
+    <div class="footer__menu">
+        <div class="footer__nav">
+            <p class="footer__subtitle">Home</p>
+            <a href="#" class="footer__desc">Home Portfolio</a>
+            <a href="#" class="footer__desc">Home Agency</a>
+            <a href="#" class="footer__desc">Home Architecture</a>
         </div>
-
+        <div class="footer__nav">
+            <p class="footer__subtitle">Portfolio</p>
+            <a href="#" class="footer__desc">Masonry Portfolio</a>
+            <a href="#" class="footer__desc">Grid Portfolio</a>
+            <a href="#" class="footer__desc">Metro Portfolio</a>
+            <a href="#" class="footer__desc">Service Details</a>
+        </div>
+        <div class="footer__nav">
+            <p class="footer__subtitle">Blog</p>
+            <a href="#" class="footer__desc">Blog Style 1</a>
+            <a href="#" class="footer__desc">Blog Style 2</a>
+            <a href="#" class="footer__desc">Blog Style 3</a>
+            <a href="#" class="footer__desc">Licensing</a>
+        </div>
+    </div>
 </footer>
 <script src="script/script.js"></script>
 

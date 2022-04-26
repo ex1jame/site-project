@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 .container {
   width: 1300px;
   padding: 0 10px;
@@ -95,6 +99,15 @@ a {
   width: 100%;
   margin-top: 10px;
 }
+.header__menu_list {
+  display: flex;
+}
+.header__menu_link:not(:last-child) {
+  margin-right: 50px;
+}
+.header__logo {
+  z-index: 5;
+}
 .header__title {
   font-weight: 600;
   font-size: 16px;
@@ -103,9 +116,6 @@ a {
 }
 .header__menu {
   transition: 0.6s;
-}
-.header__title:not(:last-child) {
-  margin-right: 50px;
 }
 .header__nav {
   padding: 30px;
@@ -326,6 +336,10 @@ a {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
+.contact__map-frame {
+  width: 95%;
+  height: 95%;
+}
 .contact__map {
   width: 856px;
   height: 600px;
@@ -431,6 +445,9 @@ a {
   line-height: 100%;
 }
 
+.studios {
+  margin-bottom: 19%;
+}
 .studios .container {
   width: 98%;
 }
