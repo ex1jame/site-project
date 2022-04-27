@@ -24,25 +24,13 @@ AOS.init({
 
 })
 //Swiper
-const swiper = new Swiper('.image-slider__wrapper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
+const swiper = new Swiper('.image-slider', {
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-    },
-
+    slidesPerView:1,
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
     },
 });
 //Темная и светлая тема
