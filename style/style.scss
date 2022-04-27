@@ -1,5 +1,9 @@
 @import "font.css";
 //Basic configuration
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -50,22 +54,6 @@ li {
   justify-content: center;
 }
 
-.dark-mode {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  right: 25px;
-  bottom: 10%;
-  background: rgba(7, 7, 7, 0.28);
-  border-radius: 50px;
-  padding: 5px;
-  border: none;
-}
-
-.dark-mode:hover {
-  background: rgb(45, 59, 102);
-}
-
 .flex-column {
   flex-direction: column;
 }
@@ -79,7 +67,7 @@ li {
   color: #FFFFFF;
   text-transform: uppercase;
   margin-top: 150px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .section_leaf-first {
@@ -94,17 +82,80 @@ li {
   right: 440px;
   top: 20px;
 }
+.background-linear{
+
+  background: linear-gradient(0deg, rgba(66, 63, 63, 0.45), rgba(169, 168, 168, 0.37));
+}
+.checkbox {
+  margin: 20px 0;
+
+  .checkbox-label {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 44px;
+    background: rgba(252, 252, 252, 0.85);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    &:after {
+      position: absolute;
+      left: -2px;
+      top: -3px;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 100px;
+      background: lighten(#fff, 30%);
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+      content: '';
+      transition: all 300ms ease;
+    }
+
+    &:active:after {
+      transform: scale(1.15, 0.85);
+    }
+  }
+
+  .checkbox-input {
+    display: none;
+
+    &:checked ~ label {
+      background: rgba(52, 52, 52, 0.53);
+
+      &:after {
+        left: 20px;
+        background: darken(#011f3a, 15%);
+
+      }
+    }
+
+    &:disabled ~ label {
+      background: lighten(#fff, 30%);
+      pointer-events: none;
+
+      &:after {
+        background: lighten(#fff, 20%);;
+      }
+    }
+  }
+
+}
 
 
 //Header
 .header {
-  z-index: 1;
-  position: absolute;
+  z-index: 50;
+  position: fixed;
   height: 80px;
   width: 100%;
-  margin-top: 10px;
+  background: #000000c2;
+  padding: 10px;
 
-
+  &__menu_icon {
+    display: none;
+  }
 
   &__menu_list {
     display: flex;
@@ -133,28 +184,28 @@ li {
   }
 
 
-  &__nav {
-    padding: 30px;
-    position: fixed;
-    height: 100%;
-    width: 200px;
-    background: rgb(29, 29, 29);
-    border-radius: 0 30px 30px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-  }
+}
 
-  &__nav-title {
+//swiper
+.image-slider {
+  padding: 30px 0 70px 0;
+}
 
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 135%;
-    color: #ffffff;
-    margin-bottom: 50px;
-  }
+.image-slider__wrapper {
 
+}
+
+.image-slider__slide {
+
+}
+
+.image-slider__image {
+  text-align: center;
+  background: linear-gradient(0deg, rgb(66, 63, 63), rgba(169, 168, 168, 0.37));
+}
+
+.image-slider__image img {
+  max-width: 100%;
 }
 
 //Hero section
@@ -162,22 +213,11 @@ li {
   z-index: 2;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(0deg, rgba(66, 63, 63, 0.45), rgba(169, 168, 168, 0.37)), url("../images/white_zal.png") no-repeat center/cover;
-
-  & .container {
-    position: relative;
-    height: 100vh;
-  }
-
-  &__info {
-
-    text-align: center;
-  }
-
   &__subtitle {
+    top: 100px;
     text-shadow: 11px 7px 8px #333333;
     text-transform: uppercase;
-    position: relative;
+    position: absolute;
     font-weight: 700;
     font-size: 30px;
     line-height: 140%;
@@ -196,8 +236,8 @@ li {
     right: 118px;
     top: 8px;
   }
-
   &__title {
+    position: absolute;
     text-shadow: 11px 7px 8px #333333;
     width: 99%;
     font-weight: 700;
@@ -280,10 +320,10 @@ li {
     color: #FFFFFF;
     font-weight: 700;
     line-height: 100%;
-    font-size: 15px;
+    font-size: 20px;
     background: rgb(134, 134, 134);
-    width: 150px;
-    height: 40px;
+    width: 250px;
+    height: 60px;
     border-radius: 10px;
     transition: 0.4s;
   }
@@ -352,7 +392,7 @@ li {
 
 //ABOUT SECTION
 .about {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 
   .section_leaf-first {
     left: 420px;
@@ -366,7 +406,7 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    grid-row-gap: 50px;
+    grid-row-gap: 30px;
     grid-column-gap: 84px;
   }
 
@@ -382,7 +422,7 @@ li {
     font-size: 24px;
     line-height: 140%;
 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__desc {
@@ -390,7 +430,7 @@ li {
     font-size: 16px;
     line-height: 140%;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -584,3 +624,5 @@ li {
     padding-top: 120px;
   }
 }
+
+
