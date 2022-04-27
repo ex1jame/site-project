@@ -5,68 +5,92 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/light-mode.css" id="theme">
     <title>Azvanteam</title>
     <link rel="stylesheet" href="style/media.css">
+
 </head>
 <body>
 <header class="header">
     <div class="container d-flex justify-between align-center">
-        <div class="header__logo">
-            <svg class="header__logo"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="80px" height="80px">
-                <path d="M 20 2 A 1.0001 1.0001 0 0 0 19.154297 2.4667969 C 9.9452861 17.042872 4.0234375 44.789064 4.0234375 44.789062 A 1.0001 1.0001 0 0 0 4.2929688 45.707031 L 6.2929688 47.707031 A 1.0001 1.0001 0 0 0 6.8046875 47.980469 L 11.804688 48.980469 A 1.0001 1.0001 0 0 0 12.447266 48.894531 L 16.447266
-                46.894531 A 1.0001 1.0001 0 0 0 17 46 C 17
-                46 16.992 45.637709 17.234375 44.304688 C 17.465691 43.032449 17.93718
-                40.917771 18.841797 37.708984 C 21.147592 37.369493 23.607238 37.010768
-                 26.121094 36.65625 C 28.759285 36.284197 29.142873 36.236121 31.21875
-                 35.949219 C 32.993324 42.408434 33 46 33 46 A 1.0001 1.0001 0 0 0
-                 33.552734 46.894531 L 37.552734 48.894531 A 1.0001 1.0001 0 0 0
-                  38.195312 48.980469 L 43.195312 47.980469 A 1.0001 1.0001 0 0 0 43.707031 47.707031 L 45.707031 45.707031 A 1.0001 1.0001 0 0 0 45.980469 44.804688 C 45.980469 44.804688 44.474078 37.265759 41.835938 28.220703 C 39.197795 19.175645 35.476781 8.6350573 30.800781 2.4003906 A 1.0001 1.0001 0 0 0 30 2 L 20 2 z M 20.589844 4 L 29.445312 4 C 33.663337 9.8304396 37.353421 19.999954 39.914062 28.779297 C 42.387113 37.258324 43.757033 43.944735 43.90625 44.679688 L 42.695312 45.890625 C 42.082586 43.962171 39.571396 36.218143 35.990234 27.589844 A 1.0001 1.0001 0 0 0 35.042969 26.972656 A 1.0001 1.0001 0 0 0 34.693359 27.044922 A 1.0001 1.0001 0 0 0 34.6875 27.046875 C 24.134845 29.164297 17.351063 31.333126 14.214844 32.443359 C 14.449844 31.845688 14.76903 31.213183 15.013672 30.603516 L 32.40625 21.914062 L 32.419922 21.908203 L 32.447266 21.894531 A 1.0001 1.0001 0 0 0 32.810547 20.425781 C 30.62024 15.816901 28.245517 11.508228 25.785156 8.3808594 A 1.0001 1.0001 0 0 0 25.003906 8 A 1.0001 1.0001 0 0 0 24.214844 8.3808594 C 19.762753 14.040148 15.530312 23.569499 12.341797 31.738281 C 9.4442808 39.16154 7.6524805 44.810263 7.3105469 45.896484 L 6.1132812 44.699219 C 6.3061731 43.824301 12.079648 17.822699 20.589844 4 z M 24.994141 10.800781 C 26.908031 13.456877 28.823868 16.827162 30.632812 20.564453 L 28.845703 21.457031 C 27.908824 19.476165 26.926687 17.487105 25.882812 15.529297 A 1.0001 1.0001 0 0 0 24.980469 15 A 1.0001 1.0001 0 0 0 24.117188 15.529297 C 22.191158 19.140354 20.445401 22.856695 18.896484 26.427734 L 16.251953 27.748047 C 18.89505 21.455018 21.882843 15.127516 24.994141 10.800781 z M 25.017578 18.28125 C 25.71208 19.635892 26.399352 20.993946 27.052734 22.353516 L 21.722656 25.015625 C 22.751195 22.783526 23.870284 20.519337 25.017578 18.28125 z M 34.443359 29.150391 C 35.016107 30.549813 35.554307 31.916813 36.072266 33.257812 C 34.702189 33.444638 31.137326 33.928976 25.841797 34.675781 C 20.626289 35.411302 15.355289 36.172975 12.638672 36.636719 C 12.843529 36.081113 13.064701 35.499479 13.283203 34.919922 C 14.158638 34.568505 21.025411 31.889934 34.443359 29.150391 z M 36.802734 35.175781 C 38.894151 40.726098 40.283543 44.938411 40.763672 46.427734 L 38.681641 46.84375 C 38.366333 45.797638 37.091282 41.680744 34.746094 35.460938 C 35.232669 35.394275 36.593992 35.204267 36.802734 35.175781 z M 16.681641 38.025391 C 15.92236 40.791416 15.488588 42.719016 15.265625 43.945312 C 15.090777 44.906974 15.106505 45.052022 15.085938 45.339844 L 13.660156 46.052734 C 14.215957 44.298152 15.047501 41.782717 16.410156 38.066406 C 16.50945 38.051402 16.580352 38.040634 16.681641 38.025391 z M 14.160156 38.412109 C 12.493699 43.033182 11.603114 45.892126 11.316406 46.841797 L 9.2402344 46.427734 C 9.4905006 45.633787 10.307249 43.076312 11.837891 38.808594 C 12.304147 38.715843 13.108008 38.578679 14.160156 38.412109 z M 34.183594 39.705078 C 35.317744 42.877299 35.877137 44.594065 36.333984 46.048828 L 34.943359 45.353516 C 34.927263 44.801007
-            34.835032 42.908494 34.183594 39.705078 z"/>
-            </svg>
+        <nav class="header__menu ">
+            <ul class="header__menu_list">
+                <li class="header__menu_link"><a href="#home" class="header__title">Главная</a></li>
+                <li class="header__menu_link"><a href="#halls" class="header__title">Залы</a></li>
+                <li class="header__menu_link"><a href="#review" class="header__title">Отзывы</a></li>
+                <li class="header__menu_link"><a href="#about" class="header__title">О Нас</a></li>
+                <li class="header__menu_link"><a href="#contact" class="header__title">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="checkbox">
+            <input type="checkbox" id="switchMode" class="checkbox-input" placeholder=""/>
+            <label for="switchMode" class="checkbox-label"></label>
         </div>
         <div class="header__menu_icon ">
             <span></span>
         </div>
-        <nav class="header__menu ">
-            <ul class="header__menu_list">
-            <li class="header__menu_link"><a href="#home" class="header__title">Главная</a></li>
-                <li class="header__menu_link"><a href="#halls" class="header__title">Залы</a></li>
-                <li class="header__menu_link"><a href="#review" class="header__title">Отзывы</a></li>
-                <li class="header__menu_link"><a href="#contact" class="header__title">Контакты</a></li>
-                <li class="header__menu_link"><a href="#about" class="header__title">О Нас</a></li>
-            </ul>
-        </nav>
-
     </div>
 </header>
-<button class="dark-mode" id="switchMode">
-    <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
-        <path d="M 24.90625 3.96875 C 24.863281 3.976563
-                    24.820313 3.988281 24.78125 4 C 24.316406 4.105469
-                     23.988281 4.523438 24 5 L 24 11 C 23.996094 11.359375
-                     24.183594 11.695313 24.496094 11.878906 C 24.808594
-                     12.058594 25.191406 12.058594 25.503906 11.878906 C 25.816406 11.695313 26.003906 11.359375 26 11 L 26 5 C 26.011719 4.710938 25.894531 4.433594 25.6875 4.238281 C 25.476563 4.039063 25.191406 3.941406 24.90625 3.96875 Z M 10.65625 9.84375 C 10.28125 9.910156 9.980469 10.183594 9.875 10.546875 C 9.769531 10.914063 9.878906 11.304688 10.15625 11.5625 L 14.40625 15.8125 C 14.648438 16.109375 15.035156 16.246094 15.410156 16.160156 C 15.78125 16.074219 16.074219 15.78125 16.160156 15.410156 C 16.246094 15.035156 16.109375 14.648438 15.8125 14.40625 L 11.5625 10.15625 C 11.355469 9.933594 11.054688 9.820313 10.75 9.84375 C 10.71875 9.84375 10.6875 9.84375 10.65625 9.84375 Z M 39.03125 9.84375 C 38.804688 9.875 38.59375 9.988281 38.4375 10.15625 L 34.1875 14.40625 C 33.890625 14.648438 33.753906 15.035156 33.839844 15.410156 C 33.925781 15.78125 34.21875 16.074219 34.589844 16.160156 C 34.964844 16.246094 35.351563 16.109375 35.59375 15.8125 L 39.84375 11.5625 C 40.15625 11.265625 40.246094 10.800781 40.0625 10.410156 C 39.875 10.015625 39.460938 9.789063 39.03125 9.84375 Z M 24.90625 15 C 24.875 15.007813 24.84375 15.019531 24.8125 15.03125 C 24.75 15.035156 24.6875 15.046875 24.625 15.0625 C 24.613281 15.074219 24.605469 15.082031 24.59375 15.09375 C 19.289063 15.320313 15 19.640625 15 25 C 15 30.503906 19.496094 35 25 35 C 30.503906 35 35 30.503906 35 25 C 35 19.660156 30.746094 15.355469 25.46875 15.09375 C 25.433594 15.09375 25.410156 15.0625 25.375
-                15.0625 C 25.273438 15.023438 25.167969 15.003906 25.0625 15 C 25.042969 15 25.019531 15 25 15 C 24.96875 15 24.9375 15 24.90625 15 Z M 24.9375 17 C 24.957031 17 24.980469 17 25 17 C 25.03125 17 25.0625 17 25.09375 17 C 29.46875 17.050781 33 20.613281 33 25 C 33 29.421875 29.421875 33 25 33 C 20.582031 33 17 29.421875 17 25 C 17 20.601563 20.546875 17.035156 24.9375 17 Z M 4.71875 24 C 4.167969 24.078125 3.78125 24.589844 3.859375 25.140625 C 3.9375 25.691406 4.449219 26.078125 5 26 L 11 26 C 11.359375 26.003906 11.695313 25.816406 11.878906 25.503906 C 12.058594 25.191406 12.058594 24.808594 11.878906 24.496094 C 11.695313 24.183594 11.359375 23.996094 11 24 L 5 24 C 4.96875 24 4.9375 24 4.90625 24 C 4.875 24 4.84375 24 4.8125 24 C 4.78125 24 4.75 24 4.71875 24 Z M 38.71875 24 C 38.167969 24.078125 37.78125 24.589844 37.859375 25.140625 C 37.9375 25.691406 38.449219 26.078125 39 26 L 45 26 C 45.359375 26.003906 45.695313 25.816406 45.878906 25.503906 C 46.058594 25.191406 46.058594 24.808594 45.878906 24.496094 C 45.695313 24.183594 45.359375 23.996094 45 24 L 39 24 C 38.96875 24 38.9375 24 38.90625 24 C 38.875 24 38.84375 24 38.8125 24 C 38.78125 24 38.75 24 38.71875 24 Z M 15 33.875 C 14.773438 33.90625 14.5625 34.019531 14.40625 34.1875 L 10.15625 38.4375 C 9.859375 38.679688 9.722656 39.066406 9.808594 39.441406 C 9.894531 39.8125 10.1875 40.105469 10.558594 40.191406 C 10.933594 40.277344 11.320313 40.140625 11.5625 39.84375 L 15.8125 35.59375 C 16.109375 35.308594 16.199219 34.867188 16.039063 34.488281 C 15.882813 34.109375 15.503906 33.867188 15.09375 33.875 C 15.0625 33.875 15.03125 33.875 15 33.875 Z M 34.6875 33.875 C 34.3125 33.941406 34.011719 34.214844 33.90625 34.578125 C 33.800781 34.945313 33.910156 35.335938 34.1875 35.59375 L 38.4375 39.84375 C 38.679688 40.140625 39.066406 40.277344 39.441406 40.191406 C 39.8125 40.105469 40.105469 39.8125 40.191406 39.441406 C 40.277344 39.066406 40.140625 38.679688 39.84375 38.4375 L 35.59375 34.1875 C 35.40625 33.988281 35.148438 33.878906 34.875 33.875 C 34.84375 33.875 34.8125 33.875 34.78125 33.875 C 34.75 33.875 34.71875 33.875 34.6875 33.875 Z M 24.90625 37.96875 C 24.863281 37.976563 24.820313 37.988281 24.78125 38 C 24.316406 38.105469 23.988281 38.523438 24 39 L 24 45 C 23.996094 45.359375 24.183594 45.695313 24.496094 45.878906 C 24.808594 46.058594 25.191406 46.058594 25.503906 45.878906 C 25.816406 45.695313 26.003906 45.359375 26 45 L 26 39 C 26.011719 38.710938 25.894531 38.433594 25.6875 38.238281 C 25.476563 38.039063 25.191406 37.941406 24.90625 37.96875 Z"/>
-    </svg>
-</button>
-<nav class="header__nav" id="navbar">
-    <a href="#home" class="header__nav-title">Главная</a>
-    <a href="#halls" class="header__nav-title">Залы</a>
-    <a href="#review" class="header__nav-title">Отзывы</a>
-    <a href="#contact" class="header__nav-title">Контакты</a>
-    <a href="#about" class="header__nav-title">О Нас</a>
-</nav>
-<section class="hero " id="home">
-    <div class="container d-flex align-center justify-center">
-        <div class="hero__info ">
-            <p class="hero__subtitle">Фотостудия</p>
-            <h1 class="hero__title">AZVANTEAM</h1>
+
+
+<section class="hero" id="home">
+    <div class="wrapper">
+        <div class="image-slider swiper-container">
+            <div class="image-slider__wrapper swiper-wrapper">
+                <div class="image-slider__slide swiper-slide">
+                    <div class="image-slider__image">
+                        <img src="images/slider-1.jpg" alt="" >
+                        <div class="hero__info" data-aos="fade-right">
+                            <p class="hero__subtitle">Фотостудия</p>
+                            <h1 class="hero__title">AZVANTEAM</h1>
+                            <form action="halls.html">
+                            <button class="hero__btn">Выбрать зал</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-slider__slide swiper-slide">
+                    <div class="image-slider__image">
+                        <img src="images/slider-2.jpg" alt="">
+                        <div class="hero__info" data-aos="fade-right">
+                            <p class="hero__desc">
+                                Спецзалы
+                                для контента
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-slider__slide swiper-slide">
+                    <div class="image-slider__image">
+                        <img src="images/slider-3.jpg" alt="">
+                        <div class="hero__info" data-aos="fade-right">
+                            <p class="hero__desc">Цвета и фактуры
+                                на любой вкус</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-slider__slide swiper-slide">
+                    <div class="image-slider__image">
+                        <img src="images/slider-4.jpg" alt="">
+                        <div class="hero__info" data-aos="fade-right">
+                            <p class="hero__desc">
+                                   Выбор локаций
+                                и реквизита</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </section>
-<section class="halls" id="halls">
+<section class="halls" id="halls" data-aos="fade-down">
     <div class="container">
         <p class="section_title">Выбор Зала
             <svg class="section_leaf-first" width="28" height="14" viewBox="0 0 28 14" fill="none"
@@ -79,19 +103,19 @@
             </svg>
         </p>
         <div class="halls__grid">
-            <div class="halls__block">
+            <div class="halls__block" data-aos="fade-right">
                 <img src="images/Akvazona.png" alt="" class="">
                 <h3 class="halls__title">АКВАЗОНА </h3>
             </div>
-            <div class="halls__block">
+            <div class="halls__block" data-aos="fade-left">
                 <img src="images/chicklorama.png" alt="" class="">
                 <h3 class="halls__title">ЦИКЛОРАМА</h3>
             </div>
-            <div class="halls__block">
+            <div class="halls__block" data-aos="fade-right">
                 <img src="images/day.png" alt="" class="">
                 <h3 class="halls__title">DAY</h3>
             </div>
-            <div class="halls__block">
+            <div class="halls__block" data-aos="fade-left">
                 <img src="images/86st.png" alt="" class="">
                 <h3 class="halls__title">86 St.</h3>
             </div>
@@ -101,7 +125,7 @@
         </form>
     </div>
 </section>
-<section class="review" id="review">
+<section class="review" id="review" data-aos="fade-up">
     <div class="container">
         <p class="section_title">Отзывы
             <svg class="section_leaf-first" width="28" height="14" viewBox="0 0 28 14" fill="none"
@@ -114,7 +138,7 @@
             </svg>
         </p>
         <div class="review__grid">
-            <div class="review__card">
+            <div class="review__card" data-aos="fade-down-right">
                 <h5 class="review__title">Кира Иванова</h5>
                 <p class="review__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus diam risus morbi
                     nulla dictum. Urna mi orci gravida placerat amet, eu, aliquet facilisis aliquet. Dolor praesent nam
@@ -127,7 +151,7 @@
                     cum bibendum in egestas. Diam, urna, sed tempus mollis aliquam elit. Facilisi nam nulla pulvinar
                     mauris vel lacinia venenatis. </p>
             </div>
-            <div class="review__card">
+            <div class="review__card" data-aos="fade-down-left">
                 <h5 class="review__title">Александра Дмитриева</h5>
                 <p class="review__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur nulla
                     viverra egestas tellus. Cursus scelerisque phasellus netus proin. Etiam mauris maecenas facilisis
@@ -140,7 +164,7 @@
                     vestibulum tempor, quis ultrices mauris.
                     Porta enim, donec odio sagittis, eget velit at. </p>
             </div>
-            <div class="review__card ">
+            <div class="review__card " data-aos="fade-up-right">
 
                 <h5 class="review__title">Яна Жернова</h5>
                 <p class="review__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia eget mattis
@@ -157,7 +181,7 @@
                     semper. </p>
 
             </div>
-            <div class="review__card">
+            <div class="review__card" data-aos="fade-up-left">
                 <h5 class="review__title">Антон Шастун</h5>
                 <p class="review__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia eget mattis
                     orci aliquam enim tincidunt gravida aliquet ut. Ipsum vulputate morbi felis, lobortis tincidunt.
@@ -173,7 +197,8 @@
         </div>
     </div>
 </section>
-<section class="about" id="about">
+<section class="about" id="about" data-aos="zoom-out"
+         data-aos-duration="1000">
     <div class="container">
         <p class="section_title">ОБ Azvanteam
             <svg class="section_leaf-first" width="28" height="14" viewBox="0 0 28 14" fill="none"
@@ -187,7 +212,7 @@
         </p>
         <div class="about__grid">
 
-            <div class="about__info">
+            <div class="about__info" data-aos="zoom-in">
                 <h5 class="about__title">Azvanteam</h5>
                 <p class="about__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in purus, sed
                     tellus eget mattis nibh quam. Eu ornare nunc, id est. Erat consectetur etiam a sit diam in imperdiet
@@ -197,13 +222,13 @@
                     Felis amet diam, non augue massa. Egestas molestie lobortis rhoncus, elit nulla nisl. Habitant
                     tortor at tempor.</p>
             </div>
-            <div class="about__img">
+            <div class="about__img" data-aos="zoom-in">
                 <img src="images/about_1.jpg" alt="" class="">
             </div>
-            <div class="about__img">
+            <div class="about__img" data-aos="zoom-in">
                 <img src="images/about_2.png" alt="" class="">
             </div>
-            <div class="about__info">
+            <div class="about__info" data-aos="zoom-in">
                 <h5 class="about__title">Azvanteam</h5>
                 <p class="about__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu cras quis ac a non
                     ut viverra turpis eget. Hendrerit quis pulvinar massa ipsum sem. Donec posuere nulla enim non neque
@@ -335,7 +360,13 @@
         </div>
     </div>
 </footer>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="script/script.js"></script>
+
 
 </body>
 </html>

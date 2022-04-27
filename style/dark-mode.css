@@ -104,9 +104,9 @@ a {
   border: 10px solid #018ABE;
   border-radius: 30px;
 }
-.header__nav{
-  background: #FFFFFF;
+.header{
+  background: rgba(255, 255, 255, 0.73);
 }
-.header__nav-title{
-  color: #2a2a2a;
+.header__title{
+  color: #111111;
 }

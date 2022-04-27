@@ -55,9 +55,7 @@
         font-size: 40px;
         padding-top: 110px;
     }
-    .header {
-        width: 85%;
-    }
+
 
     .section_leaf-first {
         display: none;
@@ -172,7 +170,7 @@
         font-size: 45px;
     }
     .header__menu_icon {
-        display: block;
+        display: table;
         position: relative;
         width: 30px;
         height: 18px;

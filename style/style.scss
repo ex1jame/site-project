@@ -1,5 +1,9 @@
 @import "font.css";
 //Basic configuration
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -50,22 +54,6 @@ li {
   justify-content: center;
 }
 
-.dark-mode {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  right: 25px;
-  bottom: 10%;
-  background: rgba(7, 7, 7, 0.28);
-  border-radius: 50px;
-  padding: 5px;
-  border: none;
-}
-
-.dark-mode:hover {
-  background: rgb(45, 59, 102);
-}
-
 .flex-column {
   flex-direction: column;
 }
@@ -79,7 +67,7 @@ li {
   color: #FFFFFF;
   text-transform: uppercase;
   margin-top: 150px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .section_leaf-first {
@@ -95,16 +83,81 @@ li {
   top: 20px;
 }
 
+.background-linear {
+
+  background: linear-gradient(0deg, rgba(66, 63, 63, 0.45), rgba(169, 168, 168, 0.37));
+}
+
+.checkbox {
+  margin: 20px 0;
+
+  .checkbox-label {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 44px;
+    background: rgba(252, 252, 252, 0.85);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    &:after {
+      position: absolute;
+      left: -2px;
+      top: -3px;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 100px;
+      background: lighten(#fff, 30%);
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+      content: '';
+      transition: all 300ms ease;
+    }
+
+    &:active:after {
+      transform: scale(1.15, 0.85);
+    }
+  }
+
+  .checkbox-input {
+    display: none;
+
+    &:checked ~ label {
+      background: rgba(52, 52, 52, 0.53);
+
+      &:after {
+        left: 20px;
+        background: darken(#011f3a, 15%);
+
+      }
+    }
+
+    &:disabled ~ label {
+      background: lighten(#fff, 30%);
+      pointer-events: none;
+
+      &:after {
+        background: lighten(#fff, 20%);;
+      }
+    }
+  }
+
+}
+
 
 //Header
 .header {
-  z-index: 1;
-  position: absolute;
+  z-index: 50;
+  position: fixed;
   height: 80px;
   width: 100%;
-  margin-top: 10px;
+  background: #000000c2;
+  padding: 10px;
 
-
+  &__menu_icon {
+    display: none;
+  }
 
   &__menu_list {
     display: flex;
@@ -133,28 +186,43 @@ li {
   }
 
 
-  &__nav {
-    padding: 30px;
-    position: fixed;
-    height: 100%;
-    width: 200px;
-    background: rgb(29, 29, 29);
-    border-radius: 0 30px 30px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-  }
+}
 
-  &__nav-title {
+//swiper
 
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 135%;
-    color: #ffffff;
-    margin-bottom: 50px;
-  }
+.swiper-button-next{
+  color: #018ABE;
+  background: rgba(140, 139, 139, 0.53);
+  position: absolute;
+  right: 100px;
+  transition: 0.6s;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+}
+.swiper-button-next:hover{
+  background: #018ABE;
+  color: #2a2a2a;
 
+}
+.swiper-button-prev{
+  color: #018ABE;
+  background: rgba(140, 139, 139, 0.53);
+  position: absolute;
+  transition: 0.6s;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  left: 80px;
+}
+.swiper-button-prev:hover{
+  background: #018ABE;
+  color: #2a2a2a;
+
+}
+.image-slider__image img {
+
+  max-width: 100%;
 }
 
 //Hero section
@@ -162,48 +230,63 @@ li {
   z-index: 2;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(0deg, rgba(66, 63, 63, 0.45), rgba(169, 168, 168, 0.37)), url("../images/white_zal.png") no-repeat center/cover;
-
-  & .container {
-    position: relative;
-    height: 100vh;
-  }
+  min-width: 0;
+  margin-bottom: 300px;
 
   &__info {
 
-    text-align: center;
+    position: absolute;
+    top: 350px;
+    left: 300px;
   }
 
   &__subtitle {
-    text-shadow: 11px 7px 8px #333333;
+
     text-transform: uppercase;
     position: relative;
+    top: 20px;
+    left: 30px;
     font-weight: 700;
     font-size: 30px;
     line-height: 140%;
     color: #FFFFFF;
   }
 
-  &__leaf {
-    text-transform: uppercase;
-    position: absolute;
-    left: 118px;
-    top: 8px;
-  }
-
-  &__leaf-2 {
-    position: absolute;
-    right: 118px;
-    top: 8px;
-  }
-
   &__title {
-    text-shadow: 11px 7px 8px #333333;
+    position: absolute;
     width: 99%;
     font-weight: 700;
-    font-size: 90px;
+    font-size: 110px;
     line-height: 140%;
     color: #FFFFFF;
+  }
+
+  &__desc {
+    position: absolute;
+    white-space: pre;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  &__btn {
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    top: 250px;
+    left: 10px;
+    background: #018ABE;
+    color: #000;
+    border-radius: 20px;
+    width: 200px;
+    height: 45px;
+    transition: 0.6s;
+  }
+
+  &__btn:hover {
+    background: #2a2a2a;
+    color: #fff;
   }
 }
 
@@ -280,10 +363,10 @@ li {
     color: #FFFFFF;
     font-weight: 700;
     line-height: 100%;
-    font-size: 15px;
+    font-size: 20px;
     background: rgb(134, 134, 134);
-    width: 150px;
-    height: 40px;
+    width: 250px;
+    height: 60px;
     border-radius: 10px;
     transition: 0.4s;
   }
@@ -352,7 +435,7 @@ li {
 
 //ABOUT SECTION
 .about {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 
   .section_leaf-first {
     left: 420px;
@@ -366,7 +449,7 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    grid-row-gap: 50px;
+    grid-row-gap: 30px;
     grid-column-gap: 84px;
   }
 
@@ -382,7 +465,7 @@ li {
     font-size: 24px;
     line-height: 140%;
 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__desc {
@@ -390,7 +473,7 @@ li {
     font-size: 16px;
     line-height: 140%;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -584,3 +667,5 @@ li {
     padding-top: 120px;
   }
 }
+
+
