@@ -26,6 +26,7 @@ AOS.init({
 //Swiper
 const swiper = new Swiper('.image-slider', {
 
+    loop: true,
     slidesPerView:1,
     // Navigation arrows
     navigation: {
